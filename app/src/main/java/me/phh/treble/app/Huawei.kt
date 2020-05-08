@@ -75,6 +75,11 @@ class Huawei: EntryStartup {
                 val value = sp.getBoolean(key, false)
                 enableHwcOverlay(!value)
             }
+            HuaweiSettings.alternateMediaprofile -> {
+                val b = sp.getBoolean(key, false)
+                val value = if(b) "true" else "false"
+                Misc.safeSetprop("persist.sys.phh.caf.media_profile", value)
+            }
         }
     }
 

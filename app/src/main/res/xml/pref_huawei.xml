@@ -24,5 +24,11 @@
 		    android:key="key_huawei_fast_charge"
 		    android:title="Huawei fast charge" />
     </PreferenceCategory>
-
+	<PreferenceCategory android:title="Media">
+	<CheckBoxPreference
+		android:defaultValue="false"
+		android:key="key_huawei_alternate_mediaprofile"
+		android:title="Use alternate media profile"
+		android:summary="Requires reboot" />
+	</PreferenceCategory>
 </PreferenceScreen>
